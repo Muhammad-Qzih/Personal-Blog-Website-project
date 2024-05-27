@@ -1,0 +1,111 @@
+.header-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  background-color: var(--color-primary);
+}
+
+.container-nav {
+  width: 90%;
+  margin: auto;
+}
+
+.nav-check {
+  display: grid;
+  align-items: center;
+  padding: 10px 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.nav-logo {
+  color: var(--color-white);
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+.tab-nav {
+  display: none;
+  outline: none;
+}
+
+.lable-nav {
+  display: none;
+  color: white;
+}
+
+.menue-icon {
+  width: 30px;
+  height: 3px;
+  margin-top: 5px;
+  background-color: var(--color-white);
+}
+
+.nav-content {
+  grid-column: 3;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-content li {
+  display: inline-block;
+  padding-right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-content li a {
+  text-decoration: none;
+  color: var(--color-white);
+  position: relative;
+}
+
+.nav-content li a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 0.3s;
+}
+
+.nav-content li a:hover::after {
+  transform: scale(1, 1);
+}
+
+@media screen and (max-width: 1200px) {
+  .container-nav {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .lable-nav {
+    display: grid;
+    cursor: pointer;
+    grid-column: 3;
+    padding-right: 10px;
+  }
+
+  .nav-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1/4;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out 0.3s;
+  }
+
+  .nav-check input:checked ~ .nav-content {
+    max-height: 500px;
+  }
+
+  .nav-content li {
+    padding: 15px 0px;
+  }
+}

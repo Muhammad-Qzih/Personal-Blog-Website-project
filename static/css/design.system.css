@@ -1,0 +1,57 @@
+:root {
+  /* system colors */
+  --color-primary: #8463c2;
+  --color-secondary: rgb(202, 170, 233);
+  --color-black: #283440;
+  --color-white: #fff;
+  --color-dark-grey: #6e6e6e;
+
+  /* typography colors Styles*/
+  --color-text: var(--color-dark-grey);
+  --color-text-heading: var(--color-primary);
+  --color-link: var(--color-primary);
+
+  /* fonts-sizes Styles*/
+  --font-size-45: 45px;
+  --font-size-30: 30px;
+  --font-size-25: 25px;
+  --font-size-20: 20px;
+  --font-size-18: 18px;
+  --font-size-16: 16px;
+  --font-size-14: 16px;
+
+  /* buttons colors Styles */
+  --btn-primary: var(--color-primary);
+  --btn-primary-hover: var(--color-primary);
+
+  /* icons colors Styles*/
+  --color-icon-primary: var(--color-white);
+  --color-icon-secoundary: var(--color-white);
+
+  /* Button Styles*/
+  --btn-font-size: var(--font-size-14);
+  --btn-radius: 5px;
+  --btn-padding: 10px;
+
+  --space-xs: 5px;
+  --space-s: 10px;
+  --space-m: 15px;
+  --space-l: 25px;
+  --space-xl: 40px;
+  --space-xxl: 70px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0eded;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family:  "Segoe UI";;
+  min-width: 100vw;
+}
